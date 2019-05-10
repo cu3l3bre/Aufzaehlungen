@@ -5,7 +5,7 @@ using namespace std;
 
 // Aufzaehlungen fuer Farben definieren
 
-enum Farbe
+enum class Farbe
 {
 	// Definition der moeglichen Werte
 	rot,	// Zahl 0
@@ -33,43 +33,41 @@ int main()
 
 
 	Farbe Autofarbe;
-	Autofarbe = gelb;
+	Autofarbe = Farbe::rot;
 
-	cout << Autofarbe << endl;
-	cout << Farbe::rot << Farbe::gelb << Farbe::blau << endl;
+	// geht erstmal mit casten, aber eigentlich juckt das auch nicht was da drin steht :p
+	// Arbeite ja hier an der stelle mit den Namen im Programm
+	
+	//cout << (int)Autofarbe << endl;
+	//cout << int(Farbe::rot) << int(Farbe::gelb) << int(Farbe::blau) << endl;
 
 	// Abfrage der Autoabfrage mit if statements
-	if (Autofarbe == rot)
+	if (Autofarbe == Farbe::rot)
 	{
 		cout << "Die Farbe des Autos ist rot" << endl;
 	}
-	else if (Autofarbe == gelb)
+	else if (Autofarbe == Farbe::gelb)
 	{
 		cout << "Die Farbe des Autos ist gelb" << endl;
 	}
-	else if (Autofarbe == blau)
+	else if (Autofarbe == Farbe::blau)
 	{
 		cout << "Die Farbe des Autos ist blau" << endl;
 	}
 	else
 	{
 		cout << "Die Farbe des Autos ist unbekannt" << endl;
-
 	}
 
 
 	// Abfrage der Autofarbe mit switchc -Statements
 	switch (Autofarbe)
 	{
-		case rot:	cout << "Die Farbe des Autos ist rot" << endl; break;
-		case gelb:	cout << "Die Farbe des Autos ist gelb" << endl; break;
-		case blau:	cout << "Die Farbe des Autos ist blau" << endl; break;
-		default:	cout << "Die Farbe des Autos ist unbekannt"	<< endl; break;
+		case Farbe::rot:	cout << "Die Farbe des Autos ist rot" << endl; break;
+		case Farbe::gelb:	cout << "Die Farbe des Autos ist gelb" << endl; break;
+		case Farbe::blau:	cout << "Die Farbe des Autos ist blau" << endl; break;
+		default:			cout << "Die Farbe des Autos ist unbekannt"	<< endl; break;
 	}
-
-
-
-
 
 	system("pause");
 	return 0;
