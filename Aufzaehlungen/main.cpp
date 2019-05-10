@@ -41,7 +41,7 @@ int main()
 	//cout << (int)Autofarbe << endl;
 	//cout << int(Farbe::rot) << int(Farbe::gelb) << int(Farbe::blau) << endl;
 
-	// Abfrage der Autoabfrage mit if statements
+	// Abfrage der Autofarbe mit if-statements
 	if (Autofarbe == Farbe::rot)
 	{
 		cout << "Die Farbe des Autos ist rot" << endl;
@@ -60,7 +60,7 @@ int main()
 	}
 
 
-	// Abfrage der Autofarbe mit switchc -Statements
+	// Abfrage der Autofarbe mit switch-statements
 	switch (Autofarbe)
 	{
 		case Farbe::rot:	cout << "Die Farbe des Autos ist rot" << endl; break;
